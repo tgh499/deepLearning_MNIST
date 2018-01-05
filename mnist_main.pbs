@@ -1,0 +1,11 @@
+#!/bin/sh
+#PBS -q gpu
+#PBS -l ngpus=1
+#PBS -l mem=10gb
+#PBS -l ncpus=1
+#PBS -N mnist_pure_main
+
+module load tensorflow
+
+cd $PBS_O_WORKDIR
+./mnist_perc_main.py
